@@ -1,0 +1,20 @@
+- simple_form_for @user do |f| 
+  -	if (@user.errors.count > 0)
+    #error_explanation
+      %h2 #{pluralize(@user.errors.count, "error")} prohibited this user from being saved:
+      %ul
+        -	@user.errors.full_messages.each do |msg|
+          %li= msg 
+  = f.input :name, :label => 'Username :', :error => false
+  %br
+  = f.input :phone, :label => 'Phone :', :error => false
+  %br
+  = f.input :email, :placeholder => 'user@domain.com', :label => 'Email :', :error => false
+  %br
+  = f.input :customer_type, :label => 'Customer Type :',:collection => ["nice customer", "bad customer"], :prompt => "Select type" , :error => false
+  %br
+  = f.button :submit 
+
+
+
+

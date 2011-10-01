@@ -1,0 +1,9 @@
+- @users.each do |user|
+  = link_to user.name, user_path(user.id) 
+  = link_to "Edit", edit_user_path(user)
+  = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+  %br
+  %br
+
+.apple_pagination1
+  = will_paginate @users

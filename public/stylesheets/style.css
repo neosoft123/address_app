@@ -1,0 +1,26 @@
+h2 {
+	
+   font-size: 20px;
+   color: #2FBE35;}
+
+.search_user {
+  background: none repeat scroll 0 0 #F1F1E1;
+  border: 1px solid #E5E5E5;
+  cursor: default;
+  padding: 1em;
+  width: 600px;
+}
+
+.search_user .user_listing {
+  background: none repeat scroll 0 0 #F1E1E1;
+  border: 1px solid #E5E5E5;
+  cursor: default;
+  padding: 1em;
+  width: 550px;
+  height: 100px;
+}
+
+.editable:hover {
+background-color: #e1eafe;
+cursor: pointer;
+}

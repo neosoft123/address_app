@@ -1,0 +1,27 @@
+%h1 Address search/Edit App
+= link_to "Add user", new_user_path
+%br
+%br
+= link_to "Show all users", users_path 
+%br
+%br
+
+= render :partial => 'users/search_user'
+%br
+%br
+
+.search_user
+  - if (@search_result.present? && @search_result != "") 
+    %h4 Search showing #{@search_result.count}  users out of #{@search_result.total_entries} 
+    - @search_result.each do |user|
+      = link_to user.name, user_path(user.id)
+      %br 
+    %br
+    %br
+    %br
+    .apple_pagination1
+      = will_paginate @search_result 
+  - else 
+    %h4 No such record found.
+    %br
+    %br
